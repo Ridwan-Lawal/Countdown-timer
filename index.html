@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-r from-red-950 to-red-900 flex justify-center items-center h-screen relative"
+  >
+    <div
+      class="containers rounded-2xl shadow-2xl bg-gradient-to-r from-orange-900 to-orange-950 max-w-lg space-y-8 py-8 px-8"
+    >
+      <h1 class="timer-block text-orange-500 text-6xl font-bold flex gap-3">
+        <span class="gap-2 flex flex-col items-center"
+          ><span class="day">00</span><span class="text-xl">Days</span></span
+        >
+        :
+        <span class="gap-2 flex flex-col items-center"
+          ><span class="hour">00</span><span class="text-xl">Hours</span></span
+        >
+        :
+        <span class="gap-2 flex flex-col items-center"
+          ><span class="min">00</span><span class="text-xl">Minutes</span></span
+        >
+        :
+        <span class="gap-2 flex flex-col items-center"
+          ><span class="sec">00</span><span class="text-xl">Seconds</span></span
+        >
+      </h1>
+
+      <!-- buttons -->
+      <div>
+        <section class="flex justify-center gap-10">
+          <button class="reset-btn bg-gradient-to-r from-cyan-950 to-cyan-900">
+            Reset
+          </button>
+          <div>
+            <button
+              class="hidden start-btn bg-gradient-to-r from-green-950 to-green-900"
+            >
+              Start
+            </button>
+
+            <button
+              class="hidden stop-btn bg-gradient-to-r from-red-950 to-red-900"
+            >
+              Pause
+            </button>
+            <button
+              class="hidden resume-btn bg-gradient-to-r from-sky-400 to-sky-300"
+            >
+              Resume
+            </button>
+          </div>
+          <div>
+            <button type="submit" class="bg-orange-700 btn-timing">
+              Timing
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- overlay timer-entry -->
+    <div
+      class="overlay hidden absolute w-screen h-screen flex justify-center items-center bg-black bg-opacity-40 transition-all"
+    >
+      <form
+        action=""
+        class="space-y-6 rounded-2xl transtion-all bg-gradient-to-r from-red-800 to-red-900 max-w-xs shadow-2xl mx-auto opacity-100 py-8 px-8"
+      >
+        <!-- days -->
+        <div class="space-y-2">
+          <label for="days" class="text-orange-100 font-medium">Days</label>
+          <input
+            type="number"
+            class="days rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            name="days"
+          />
+        </div>
+
+        <!-- hours -->
+        <div class="space-y-2">
+          <label for="days" class="text-orange-100 font-medium">Hours</label>
+          <input
+            type="number"
+            class="hours rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            name="hours"
+          />
+        </div>
+
+        <!-- minutes -->
+        <div class="space-y-2">
+          <label for="days" class="text-orange-100 font-medium">Minutes</label>
+          <input
+            type="number"
+            class="minutes rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            name="minutes"
+          />
+        </div>
+
+        <!-- seconds -->
+        <div class="space-y-2">
+          <label for="days" class="text-orange-100 font-medium">Seconds</label>
+          <input
+            type="number"
+            class="seconds rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            name="seconds"
+          />
+        </div>
+
+        <div class="text-center space-x-2">
+          <button
+            type="submit"
+            class="bg-orange-700 btn-timer-submit shadow-sm"
+          >
+            Enter
+          </button>
+          <button type="submit" class="bg-red-700 btn-cancel shadow-sm">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- script -->
+    <script src="./src/script.js"></script>
+  </body>
+</html>
