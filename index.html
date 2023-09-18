@@ -9,38 +9,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
   <body
-    class="bg-gradient-to-r from-red-950 to-red-900 flex justify-center items-center h-screen relative"
+    class="bg-gradient-to-r from-red-950 to-red-900 flex justify-center items-center h-screen relative font-robo font-thin"
   >
     <div
-      class="containers rounded-2xl shadow-2xl bg-gradient-to-r from-orange-900 to-orange-950 max-w-lg space-y-8 py-8 px-8"
+      class="containers rounded-2xl shadow-2xl bg-gradient-to-r from-orange-900 to-orange-950 max-w-lg space-y-8 py-8 px-5 md:py-8 md:px-8"
     >
-      <h1 class="timer-block text-orange-500 text-6xl font-bold flex gap-3">
-        <span class="gap-2 flex flex-col items-center"
-          ><span class="day">00</span><span class="text-xl">Days</span></span
-        >
+      <div
+        class="timer-block text-orange-500 text-5xl md:text-7xl font-bold flex gap-1 md:gap-3"
+      >
+        <section class="gap-2 flex flex-col items-center">
+          <p class="day">00</p>
+          <p class="text-xl">Days</p>
+        </section>
         :
-        <span class="gap-2 flex flex-col items-center"
-          ><span class="hour">00</span><span class="text-xl">Hours</span></span
-        >
+        <section class="gap-2 flex flex-col items-center">
+          <p class="hour">00</p>
+          <p class="text-xl">Hours</p>
+        </section>
         :
-        <span class="gap-2 flex flex-col items-center"
-          ><span class="min">00</span><span class="text-xl">Minutes</span></span
-        >
+        <section class="gap-2 flex flex-col items-center">
+          <p class="min">00</p>
+          <p class="text-xl">Minutes</p>
+        </section>
         :
-        <span class="gap-2 flex flex-col items-center"
-          ><span class="sec">00</span><span class="text-xl">Seconds</span></span
-        >
-      </h1>
+        <section class="gap-2 flex flex-col items-center">
+          <p class="sec">00</p>
+          <p class="text-xl">Seconds</p>
+        </section>
+      </div>
 
       <!-- buttons -->
       <div>
         <section class="flex justify-center gap-10">
-          <button class="reset-btn bg-gradient-to-r from-cyan-950 to-cyan-900">
+          <button
+            class="reset-btn border-none bg-gradient-to-r from-orange-700 to-red-800 shadow-md shadow-orange-950"
+          >
             Reset
           </button>
           <div>
@@ -72,7 +86,7 @@
 
     <!-- overlay timer-entry -->
     <div
-      class="overlay hidden absolute w-screen h-screen flex justify-center items-center bg-black bg-opacity-40 transition-all"
+      class="overlay hidden absolute w-screen h-screen flex justify-center items-center bg-black bg-opacity-40 bg-blend-luminosity transition-all animate__animated animate__fadeIn animate__faster backdrop-blur-lg"
     >
       <form
         action=""
