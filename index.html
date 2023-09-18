@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
       rel="stylesheet"
     />
 
@@ -20,32 +20,32 @@
     />
   </head>
   <body
-    class="bg-gradient-to-r from-red-950 to-red-900 flex justify-center items-center h-screen relative font-robo font-thin"
+    class="bg-gradient-to-r from-gray-950 to-gray-900 flex justify-center items-center h-screen relative font-robo font-extralight"
   >
     <div
-      class="containers rounded-2xl shadow-2xl bg-gradient-to-r from-orange-900 to-orange-950 max-w-lg space-y-8 py-8 px-5 md:py-8 md:px-8"
+      class="containers rounded-2xl shadow-2xl bg-gradient-to-r from-gray-900 to-gray-950 max-w-lg space-y-8 py-8 px-5 md:py-8 md:px-8"
     >
       <div
-        class="timer-block text-orange-500 text-5xl md:text-7xl font-bold flex gap-1 md:gap-3"
+        class="timer-block text-white text-6xl md:text-7xl font-bold flex gap-1 md:gap-3"
       >
         <section class="gap-2 flex flex-col items-center">
-          <p class="day">00</p>
-          <p class="text-xl">Days</p>
+          <p class="day font-thin">00</p>
+          <p class="text-lg">Days</p>
         </section>
         :
         <section class="gap-2 flex flex-col items-center">
-          <p class="hour">00</p>
-          <p class="text-xl">Hours</p>
+          <p class="hour font-thin">00</p>
+          <p class="text-lg">Hours</p>
         </section>
         :
         <section class="gap-2 flex flex-col items-center">
-          <p class="min">00</p>
-          <p class="text-xl">Minutes</p>
+          <p class="min font-thin">00</p>
+          <p class="text-lg">Minutes</p>
         </section>
         :
         <section class="gap-2 flex flex-col items-center">
-          <p class="sec">00</p>
-          <p class="text-xl">Seconds</p>
+          <p class="sec font-thin">00</p>
+          <p class="text-lg">Seconds</p>
         </section>
       </div>
 
@@ -53,30 +53,33 @@
       <div>
         <section class="flex justify-center gap-10">
           <button
-            class="reset-btn border-none bg-gradient-to-r from-orange-700 to-red-800 shadow-md shadow-orange-950"
+            class="reset-btn font-light border-none bg-gradient-to-r from-orange-700 to-red-800 shadow-md shadow-orange-950"
           >
             Reset
           </button>
           <div>
             <button
-              class="hidden start-btn bg-gradient-to-r from-green-950 to-green-900"
+              class="hidden font-light start-btn bg-gradient-to-r from-green-950 to-green-900"
             >
               Start
             </button>
 
             <button
-              class="hidden stop-btn bg-gradient-to-r from-red-950 to-red-900"
+              class="hidden font-light stop-btn bg-gradient-to-r from-red-950 to-red-900"
             >
               Pause
             </button>
             <button
-              class="hidden resume-btn bg-gradient-to-r from-sky-400 to-sky-300"
+              class="hidden font-light resume-btn bg-gradient-to-r from-sky-700 to-sky-500"
             >
               Resume
             </button>
           </div>
           <div>
-            <button type="submit" class="bg-orange-700 btn-timing">
+            <button
+              type="submit"
+              class="bg-gradient-to-l from-orange-700 to-orange-800 btn-timing"
+            >
               Timing
             </button>
           </div>
@@ -90,14 +93,14 @@
     >
       <form
         action=""
-        class="space-y-6 rounded-2xl transtion-all bg-gradient-to-r from-red-800 to-red-900 max-w-xs shadow-2xl mx-auto opacity-100 py-8 px-8"
+        class="space-y-6 rounded-2xl transtion-all bg-gradient-to-r from-gray-900 to-slate-950 max-w-xs shadow-2xl mx-auto opacity-100 py-8 px-8"
       >
         <!-- days -->
         <div class="space-y-2">
           <label for="days" class="text-orange-100 font-medium">Days</label>
           <input
             type="number"
-            class="days rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            class="days rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-gray-950 py-2 px-4"
             name="days"
           />
         </div>
@@ -107,7 +110,7 @@
           <label for="days" class="text-orange-100 font-medium">Hours</label>
           <input
             type="number"
-            class="hours rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            class="hours rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-gray-950 py-2 px-4"
             name="hours"
           />
         </div>
@@ -117,7 +120,7 @@
           <label for="days" class="text-orange-100 font-medium">Minutes</label>
           <input
             type="number"
-            class="minutes rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            class="minutes rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-gray-950 py-2 px-4"
             name="minutes"
           />
         </div>
@@ -127,7 +130,7 @@
           <label for="days" class="text-orange-100 font-medium">Seconds</label>
           <input
             type="number"
-            class="seconds rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-red-950 py-2 px-4"
+            class="seconds rounded-xl block focus:outline-0 text-sm font-medium text-orange-50 bg-gray-950 py-2 px-4"
             name="seconds"
           />
         </div>
@@ -135,11 +138,14 @@
         <div class="text-center space-x-2">
           <button
             type="submit"
-            class="bg-orange-700 btn-timer-submit shadow-sm"
+            class="bg-gradient-to-l from-orange-700 to-orange-800 btn-timer-submit shadow-sm"
           >
             Enter
           </button>
-          <button type="submit" class="bg-red-700 btn-cancel shadow-sm">
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-red-700 to-red-900 btn-cancel shadow-sm"
+          >
             Cancel
           </button>
         </div>
